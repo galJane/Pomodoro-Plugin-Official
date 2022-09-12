@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>org.tamusa.PomodoroPlugin</id>
+    <name>Pomodoro Guide</name>
+    <version>1.0-SNAPSHOT</version>
+    <vendor email="support@pomodoroGuide.com" url="http://www.pomodoroGuide.com">Pomodoro Guide</vendor>
+
+    <description><![CDATA[
+    The IDE will establish an ongoing work/break loop, preventing the programmer from manually setting<br>
+    up the timer on their phone/laptop every time it rings for them to take a break.
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+
+        <group id="pomodoroGuide.groupActions" text="Pomodoro Guide">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action class="com.tamusa.pomodoroGuide.startSession" id="pluginMenu" text="Session"/>
+        </group>
+
+
+
+
+        <!--
+        <action id="pluginMenu" class="com.tamusa.pomodoroGuide.startSession" text="Pomodoro Guide">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+        -->
+
+    </actions>
+</idea-plugin>
